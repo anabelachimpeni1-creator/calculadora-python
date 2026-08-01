@@ -1,32 +1,30 @@
-def soma(a, b):
-    return a + b
+print("=== Calculadora Python ===")
 
-def subtracao(a, b):
-    return a - b
+num1 = float(input("Digite o primeiro número: "))
+num2 = float(input("Digite o segundo número: "))
 
-def multiplicacao(a, b):
-    return a * b
+print("\nEscolha uma operação:")
+print("1 - Soma")
+print("2 - Subtração")
+print("3 - Multiplicação")
+print("4 - Divisão")
 
-def divisao(a, b):
-    if b == 0:
-        return "Erro: divisão por zero."
-    return a / b
+opcao = input("Opção: ")
 
-print("=== Calculadora em Python ===")
+if opcao == "1":
+    print("Resultado:", num1 + num2)
 
-num1 = float(input("Primeiro número: "))
-operacao = input("Operação (+, -, *, /): ")
-num2 = float(input("Segundo número: "))
+elif opcao == "2":
+    print("Resultado:", num1 - num2)
 
-if operacao == "+":
-    resultado = soma(num1, num2)
-elif operacao == "-":
-    resultado = subtracao(num1, num2)
-elif operacao == "*":
-    resultado = multiplicacao(num1, num2)
-elif operacao == "/":
-    resultado = divisao(num1, num2)
+elif opcao == "3":
+    print("Resultado:", num1 * num2)
+
+elif opcao == "4":
+    if num2 != 0:
+        print("Resultado:", num1 / num2)
+    else:
+        print("Não é possível dividir por zero.")
+
 else:
-    resultado = "Operação inválida."
-
-print(f"Resultado: {resultado}")
+    print("Opção inválida.")
