@@ -1,30 +1,38 @@
-print("=== Calculadora Python ===")
+continuar = "s"
 
-num1 = float(input("Digite o primeiro número: "))
-num2 = float(input("Digite o segundo número: "))
+while continuar == "s":
 
-print("\nEscolha uma operação:")
-print("1 - Soma")
-print("2 - Subtração")
-print("3 - Multiplicação")
-print("4 - Divisão")
+    print("=== Calculadora Python ===")
 
-opcao = input("Opção: ")
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
 
-if opcao == "1":
-    print("Resultado:", num1 + num2)
+    print("\nEscolha uma operação:")
+    print("1 - Soma")
+    print("2 - Subtração")
+    print("3 - Multiplicação")
+    print("4 - Divisão")
 
-elif opcao == "2":
-    print("Resultado:", num1 - num2)
+    opcao = input("Opção: ")
 
-elif opcao == "3":
-    print("Resultado:", num1 * num2)
+    if opcao == "1":
+        print("Resultado:", num1 + num2)
 
-elif opcao == "4":
-    if num2 != 0:
-        print("Resultado:", num1 / num2)
+    elif opcao == "2":
+        print("Resultado:", num1 - num2)
+
+    elif opcao == "3":
+        print("Resultado:", num1 * num2)
+
+    elif opcao == "4":
+        if num2 != 0:
+            print("Resultado:", num1 / num2)
+        else:
+            print("Não é possível dividir por zero.")
+
     else:
-        print("Não é possível dividir por zero.")
+        print("Opção inválida.")
 
-else:
-    print("Opção inválida.")
+    continuar = input("\nDeseja fazer outra operação? (s/n): ").lower()
+
+print("\nObrigado por usar a calculadora!")
